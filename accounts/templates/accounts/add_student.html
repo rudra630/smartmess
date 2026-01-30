@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+<h2>Add Student</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Student</button>
+</form>
+
+<a href="{% url 'student_list' %}">Back</a>
+
+<h2>Add Student</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Roll No:</label><br>
+    <input type="text" name="roll_no" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <button type="submit">Add Student</button>
+</form>
+
+</body>
+</html>

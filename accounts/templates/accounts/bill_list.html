@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mess Bills</title>
+</head>
+<body>
+
+<h2>Monthly Mess Bills</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+    <th>Student</th>
+    <th>Month</th>
+    <th>Total Days</th>
+    <th>Present Days</th>
+    <th>Amount (₹)</th>
+</tr>
+
+{% for bill in bills %}
+<tr>
+    <td>{{ bill.student.name }}</td>
+    <td>{{ bill.month }}/{{ bill.year }}</td>
+    <td>{{ bill.total_days }}</td>
+    <td>{{ bill.present_days }}</td>
+    <td>{{ bill.amount }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

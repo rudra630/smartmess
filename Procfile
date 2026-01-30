@@ -1,0 +1,1 @@
+web: gunicorn smartmess.wsgi:application
